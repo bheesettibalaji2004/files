@@ -1,0 +1,6 @@
+from pymongo import MongoClient
+my_client = MongoClient("localhost",27017)
+my_db = my_client["a"]
+sample = my_db["sample"]
+output=list(sample.find())
+print(output)

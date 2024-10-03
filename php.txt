@@ -1,0 +1,17 @@
+----------connection parameters---------
+$server = "localhost";
+$username ="root";
+$password ="";
+$dbname = "name";
+-----------creating connection---------------
+$conn = mysql_connect($server,$username,$password,$dbname);
+
+--------check connection------
+if ($conn)
+{
+  echo "database connected successfully";
+}
+else
+{
+   echo "database not connected";
+}

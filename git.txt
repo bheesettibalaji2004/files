@@ -1,0 +1,37 @@
+git config --global user.name "bheesettibalaji2004"
+git config --global user.email balaji9010215083@gmail.com
+ignore --global to set identity ony in this repository
+
+echo helo >file1.txt   (to create file and add helo in it)
+echo world >file2.txt
+git add *.txt  (to add all files with .txt)  (staging means adding)
+
+git status (git status -s)
+git commit -m "after adding file1 and file2"
+
+echo hello >>file1.txt  (to change content inside file1.txt)
+git commit -a -m(or -am) "message" (-a means all modified files) (skip staging)
+
+del file2.txt(to delete file from command prompt)
+
+git ls-files(to see list of files)
+git del test2.txt (delete from both working directory and staging area)
+
+move file1.txt file2.txt
+ren file1.txt FILE1.txt
+
+git move file1.txt file2.txt(move operation done in both working directory and staging area)
+
+git log (to see history)
+-----ignore file---
+echo balaji.txt >.gitignore
+after all to ignore a file just open .gitignore in vs code(code .gitignore) and add file name in it and now commit
+
+git restore .(to undo all local changes)
+
+git branch (to see current branch name)
+git branch -M branchname (to change branch name)
+git remote add origin {link}
+git push origin branchname
+git push -u origin branchname(to use same file in future)(-u upstream)
+git pull

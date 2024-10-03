@@ -1,0 +1,64 @@
+https://nodejs.org/en/download/prebuilt-installer
+->next -> add to path ->next
+open command prompt
+   node --version
+   npm --version
+-> to install angular = npm install -g @angular/cli
+      mkdir foldername1
+      cd  foldername1
+      ng new foldername2(project folder)
+      cd foldrrname2
+------------------------------------------------------------------------------------------
+in command prompt inside vscode terminal
+      ng serve(to start server)
+      ctrl+c (to stop server)
+------------------------------------------------------------------------------------------
+folder
+   |
+  src--------------------------
+   |                          |
+   |->app                     |->first
+       (components)                 (components)
+        1.html                       1.html
+        2.css                        2.css
+        3.spec.ts                    3.spec.ts
+        4.ts                         4.ts
+*to create a component =ng generate component (name)  or ng g c (name)
+------------------------------------------------------------------------------------------
+* error:-'app-first' is not a known element
+       -> to write any component selector, use app.component.html
+       -> to import any component selector details, use app.component.ts
+*open app.component.html
+       <app-(new component name)></app-(new component name)>  -.component selector
+*now open app.component.ts
+       import {FirstComponent} from './first/first.component';  (3rd line)
+       now in imports from @Component, add ,FirstComponent      (8th line)
+         or
+	open app.component.ts and inside @component there is imports ,in that add new Component(FirstComponent) inside []
+
+------------------------------------------------------------------------------------------
+CSS PROPERTIES:
+       *in ts css properties are same but we have to put it inside" "
+       *in js variablename.style.property=' ';
+------------------------------------------------------------------------------------------
+EVENTS [ in angular remove on and put remaining inside() ]
+onclick = mouse left-click
+ondblclick = mouse left-double-click
+oncontextmmenu = mouse right-click
+onmouseover = mouse on parent or child
+onmouseenter = mouse on parent
+onmouseleave = mouse off from it
+onmousedown = mouse button hold
+onmouseup = mouse button release
+------------------------------------------------------------------------------------------
+.TS
+export class {
+     function(){
+         alert("hi");
+     }
+}
+------------------------------------------------------------------------------------------
+string interpolation: {{variable}}
+property binding:
+event binding: (event)
+------------------------------------------------------------------------------------------

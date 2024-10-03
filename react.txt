@@ -1,0 +1,35 @@
+1. install Nodejs
+2. open command prompt
+3. node --version
+4. npm install -g create-react-app
+5. open afolder in vscode (or) mkdir foldername and cd
+6. create-react-app appname(app name should be in small)
+7. pubic
+     ->index.html(main)
+     ->images
+   src
+     ->App.css
+     ->App.js
+     ->index.js
+     ->index.css
+Note: (  App.js  ->index.js  - >index.html  )
+8.npm start to startserve and ctrl+c to stop server
+9.At endof every new component write export default Name(class or function)
+10.JSX(using js inside html)
+
+Function:
+import line
+const App = () =>{
+  return(
+  )
+}
+export default App;
+
+Class:
+import line
+class App extends React.Component{
+  render(){
+     return(
+     )
+   {
+}
