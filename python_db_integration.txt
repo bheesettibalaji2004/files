@@ -1,0 +1,28 @@
+--------------------mongodb--------------------
+from pymongo import MongoClient
+my_client = MongoClient("localhost",27017)
+my_database = my_client["a"]
+my_collection = my_db["sample"]
+output=list(sample.find())
+print(output)
+----------------------MySQL--------------------
+import mysql.connector
+connection = mysql.connector.connect(host ="localhost",user="root",password ="MSQLpassword",database="DatabaseName")
+-->to chect connection
+if connection:
+     print ("connection established")
+my_cursor =connection.cursor()
+-->to create database
+	my_cursor.execute("create database name")  
+-->to create table
+	my_cursor.execute("create table table1 (name varchar(20), password varchar(20),mobile_no int(10)")
+
+
+
+
+
+
+
+
+
+

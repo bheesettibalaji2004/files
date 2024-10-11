@@ -5,7 +5,7 @@ $password ="";
 $dbname = "name";
 -----------creating connection---------------
 $conn = mysql_connect($server,$username,$password,$dbname);
-or
+			or
 $conn = mysqli_connect("","","","");
 
 --------check connection------

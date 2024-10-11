@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+
+
+redirect: 
+	-->redirect("/")
+	In forms to check condition if it is get or post then use it in another url(not in same main url that return html file)
+url_for:
+	-->redirect(url_for("function name"))
+	In forms for 2nd url(condition checking url) instead of writing redirect add url_for also (incase path change then answer of redirect also change to ensure that add FunctionName which is fixed)
+flash:
+	--> (in condition if username already exist)
