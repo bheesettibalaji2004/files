@@ -9,7 +9,7 @@ git add *.txt  (to add all files with .txt)  (staging means adding)
 git status (git status -s)
 git commit -m "after adding file1 and file2"
 
-echo hello >>file1.txt  (to change content inside file1.txt)
+echo hello >> file1.txt  (to change content inside file1.txt)
 git commit -a -m(or -am) "message" (-a means all modified files) (skip staging)
 
 del file2.txt(to delete file from command prompt)

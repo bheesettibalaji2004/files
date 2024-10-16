@@ -1,4 +1,5 @@
 --------------------mongodb--------------------
+^ in cmd prompt: pip install pymongo ^
 from pymongo import MongoClient
 my_client = MongoClient("localhost",27017)
 my_database = my_client["a"]
@@ -6,13 +7,16 @@ my_collection = my_db["sample"]
 output=list(sample.find())
 print(output)
 ----------------------MySQL--------------------
+^ in cmd prompt: pip install mysql-connector-python ^
 import mysql.connector
 connection = mysql.connector.connect(host ="localhost",user="root",password ="MSQLpassword",database="DatabaseName")
--->to chect connection
-if connection:
+
+-->to check connection
+if connection.is_connected():
      print ("connection established")
-my_cursor =connection.cursor()
--->to create database
+
+my_cursor =connection.cursor()  ^cursor is used to execute sql queries and it manages db rrsources and connections^
+-->to create database if database is not written in connect method
 	my_cursor.execute("create database name")  
 -->to create table
 	my_cursor.execute("create table table1 (name varchar(20), password varchar(20),mobile_no int(10)")
