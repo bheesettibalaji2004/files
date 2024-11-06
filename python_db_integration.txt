@@ -4,23 +4,25 @@ from pymongo import MongoClient
 my_client = MongoClient("localhost",27017)
 my_database = my_client["a"]
 my_collection = my_db["sample"]
-output=list(sample.find())
-print(output)
-----------------------MySQL--------------------
-^ in cmd prompt: pip install mysql-connector-python ^
-import mysql.connector
-connection = mysql.connector.connect(host ="localhost",user="root",password ="MSQLpassword",database="DatabaseName")
 
--->to check connection
-if connection.is_connected():
-     print ("connection established")
+----------------------MySQL--------------------
+^ in cmd prompt: pip install pymysql ^
+import pymysql
+connection = pymysql.connect(host ="localhost",port=3302,user="root",password ="MSQLpassword",database="DatabaseName")
 
 my_cursor =connection.cursor()  ^cursor is used to execute sql queries and it manages db rrsources and connections^
 -->to create database if database is not written in connect method
 	my_cursor.execute("create database name")  
 -->to create table
-	my_cursor.execute("create table table1 (name varchar(20), password varchar(20),mobile_no int(10)")
-
+	my_cursor.execute("create table if not exist table1 (name varchar(20), password varchar(20),mobile_no int(10)")
+-->to insert data
+	my_cursor.execute(f"insert into table tablename(name,password) values('{name}','{password}')")
+					or
+	my_cursor.execute("insert into table tablename(name,password) values(%s,%s),(f"{name}",f"{password}")")
+-->after every execution to save in table use
+	connection.commit()
+-->to find 
+	my_cursor.execute("select * from tablename where name = (%s),(f"{name}")")
 
 
 

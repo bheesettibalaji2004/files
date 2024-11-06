@@ -1,31 +1,45 @@
 	----------in command prompt--------------
--->show flask (to check flask installed or not)
+create a folder and open it in command prompt
 -->pip install flask
+-->pip install pymongo
+-->pip install pymysql
+pip show flask pymysql pymongo(to see installed or not)
 
-Setting flask app:
-	1. set FLASK_APP = appname.py (environment variable)
-	   flask run (or)
-	2.flask --app appname.py run (if app name is app.py then just flask run)
+run:
+-->1. set FLASK_APP = appname.py (environment variable)
+-->flask run (or)
+-->2.flask --app appname.py run (if app name is app.py then just flask run)
 Debug (to ignore stop and start the server) :
 	flask --debug run
 To change port number:
-	flask run -p 1000
-folder structure :
-  folder
-	-->static
-		-->style1.css
-		-->style2.css
-	-->templates
-		-->index.html
-		-->name.html
-	app.py
-
-
-
+	flask --debug run -p 1000
+--------------------DATA BASE CONNECTION------------------------
+1.mongodb
+from pymongo install MongoClient
+my_client=MongoClient("localhost",27017)
+my_db=my_client["databasename"]
+my_collection=my_db["name"]
+2.mysql
+import pymysql
+connection=pymsql.connect(
+	host="localhost"'
+	user="root",
+	password="password",
+	port="5000"
+) 
+--------------------FOLDER STRUCTURE-----------------------------
+folder_name
+  ->static
+	-->style1.css
+	-->style2.css
+  ->templates
+	-->index.html
+	-->name.html
+  app.py
 ---------------FORMS :-------------
 GET :- data is visible in url after sending data
 POST :- data is hidden in url after sending data
-* in html at form if you add action="name" then you have to create a new route("/name") and write a function to see data .
+* In html at form if you add action="name" then you have to create a new route("/name") and write a function to see data .
 
 ^ if method is get then no errors are found ^
 ^ if method is POST then it displays error (to solve this we have to check condition is get or post) ^
@@ -37,9 +51,12 @@ render_template:
 	it is used to display html pages
 redirect: 
 	-->redirect("/")
-	In forms to check form is get or post then use it in 2nd url(route) if it is used in main url it cause error ^by default forms always in get method so else (get)condition became true and it occurs continuously and display error 	(this page isn't working)
+	In forms to check form is get or post then use it in 2nd url(route) if it is used in main url it cause error ^by default forms always in get method so else (get)condition became 	true and it occurs continuously and display error 	(this page isn't working)
 url_for:
 	-->redirect(url_for("function name"))
-	In forms at 2nd url(condition checking url) instead of writing redirect ,add url_for also (incase path change then output of redirect also change to ensure that add FunctionName which is fixed)
+	In forms at 2nd url(condition checking url) instead of writing redirect ,add url_for also (incase path change then output of redirect also change to ensure that add FunctionName 	which is fixed)
 flash:
 	--> (in condition if username already exist)
+------------------------Mail in project----------------
+pip install flask-mail
+

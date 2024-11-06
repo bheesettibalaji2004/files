@@ -2,36 +2,193 @@ git config --global user.name "bheesettibalaji2004"
 git config --global user.email balaji9010215083@gmail.com
 ignore --global to set identity ony in this repository
 
-echo helo >file1.txt   (to create file and add helo in it)
-echo world >file2.txt
+#echo helo >file1.txt   (to create file and add helo in it)
+#echo world >file2.txt
 git add *.txt  (to add all files with .txt)  (staging means adding)
+
 
 git status (git status -s)
 git commit -m "after adding file1 and file2"
 
-echo hello >> file1.txt  (to change content inside file1.txt)
+
+#echo hello >> file1.txt  (to change content inside file1.txt)
 git commit -a -m(or -am) "message" (-a means all modified files) (skip staging)
 
-del file2.txt(to delete file from command prompt)
+#del file2.txt(to delete file from command prompt)
 
 git ls-files(to see list of files)
 git del test2.txt (delete from both working directory and staging area)
 
-move file1.txt file2.txt
-ren file1.txt FILE1.txt
+#move file1.txt file2.txt
+#ren file1.txt FILE1.txt
 
 git move file1.txt file2.txt(move operation done in both working directory and staging area)
 
 git log (to see history)
+
 -----ignore file---
 echo balaji.txt >.gitignore
 after all to ignore a file just open .gitignore in vs code(code .gitignore) and add file name in it and now commit
 
 git restore .(to undo all local changes)
 
+
+
+git checkout -b newbranchname (to create new branch)
+git checkout branchname (to switch to another branch)
 git branch (to see current branch name)
-git branch -M branchname (to change branch name)
+git branch -M branchname (to rename branch)
+git branch --list
 git remote add origin {link}
 git push origin branchname
 git push -u origin branchname(to use same file in future)(-u upstream)
 git pull
+
+-------------------------------------
+git init
+git add .
+git commit -m "after adding files"
+git remome add origin link
+git checkout -b new_branch
+git push origin branchname
+
+
+----------------------------
+
+
+
+
+
+
+
+
+
+
+
+Get your GitHub email, username, password
+	Launch one Flask nimbus 
+
+git clone https://github.com/codewala-feed/cse3_git.git
+----------------------------
+git checkout -b backend
+---write your work----
+git add .
+git commit -m "backend code"
+git push -u origin backend
+-----------------------------
+
+git branch --list
+------------------------------
+git checkout -b frontend
+git checkout backend
+git checkout frontend
+git merge backend
+------------------------------
+git checkout frontend
+git add .
+git commit -m "frontend code"
+  git config --global user.email "your@email"
+  git config --global user.name "your username"
+git commit -m "frontend code"
+git push -u origin frontend
+  provide the configurations
+  become a collaborator 
+git push -u origin frontend
+git checkout main
+git merge frontend
+------------------------------------
+
+monkey type
+
+
+
+
+
+-------------------------------------
+git checkout -b backend
+---develop your code---
+git add .
+git commit -m "backend code day1"
+git push -u origin backend
+--------------------------------------
+git checkout main
+git merge backend
+git push -u origin main
+--------------------------------------
+git clone https://github.com/codewala-feed/csit_bs_git.git
+---------------------------------------
+git checkout -b frontend
+git add .
+git commit -m "frontend code day1"
+   git config --global user.email "your@gmail.com"
+   git config --global user.name  "your username"
+git commit -m "frontend code day1"
+git push -u origin frontend
+   provide configurations/authentications
+   become a collaborator
+git push -u origin frontend
+---------------------------------------------
+git checkout backend
+git merge frontend
+git push -u origin backend
+-------------------------------------------
+git checkout main
+git merge backend
+git push -u origin main
+-------------------------------------------
+===============================================================
+git pull
+-----------
+git checkout backend
+---develop work---
+git add .
+git commit -m "version 1.0"
+git push -u origin backend
+-------------------------------------------------
+git checkout frontend
+git merge backend
+git push -u origin frontend
+------------------------------------------------
+git checkout main
+git merge backend
+git push -u origin main
+------------------------------------------------
+git checkout backend
+--------added a new feature in backend branch---
+git add .
+git commit -m "version 2.0"
+git push -u origin backend
+-------------------------------------------------
+git checkout frontend
+git merge backend
+git push -u origin frontend
+------------------------------------------------
+git checkout main
+git merge backend
+git push -u origin main
+=============================================
+git reset --hard <hash code>
+git push -u origin main --force
+------------------------------------
+
+d6ee374 --> HEAD
+0928df1
+666b243
+0006ae1
+e1de1cf 
+7aec420
+
+git reset --hard d6ee374
+git push -u origin main --force
+
+
+TASK:
+  create a repository and add README.md, .gitignore files
+  send a collaborator request to your friend for this repository
+  create two branches i.e., backend, frontend
+  develop the work day-wise atleast two commits
+  merge the updated code with main branch
+  ---
+  add a new feature and remove it with version control
+
+
