@@ -49,12 +49,3 @@ write sample html code
 now add new lines in views.py
 --> def sample_html(request):
 -->     return render(request,'hello.html',{'name':'balaji'}
-
-
-
-
-
-
-
-
-
