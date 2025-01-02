@@ -1,3 +1,17 @@
+"""
+.color("red")
+.width(5)
+.shape("circle")
+.speed(10) ->  max is 10
+.forward(100)
+.left(90) or .right(90) -> value is angle
+.up() -> to lift object
+.goto(x,y) -> to move object
+.down() -> to place object
+.circle(10) -> radius value
+.begin_fill() or .end_fill -> fill with solid color
+.done() -> to display always
+"""
 from turtle import *
 
 # a = Turtle()
@@ -80,4 +94,3 @@ from turtle import *
 #     a.goto(x,y)
 #     a.down()
 # done()
-
